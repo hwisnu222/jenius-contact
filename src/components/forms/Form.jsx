@@ -50,6 +50,7 @@ export default function Form({ title }) {
 
   const submitForm = () => {
     if (id) {
+      form.id = id;
       return updateContact.mutate(form);
     }
     addContact.mutate(form);
